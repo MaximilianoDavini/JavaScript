@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    
+    /* background: rgba(228, 228, 228, 0.538); */
+    background: url(img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.container {
+min-height: 50vh;
+width: 500px;
+background:rgba(14, 81, 97, 0.613);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: 2px solid black;
+border-radius: 10px;
+}
+
+.container h1 {
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+    }
+    .container p {
+        color: white;
+        font-size: 20px;
+        text-shadow: 2px 2px 2px black;
+        margin-bottom: 10px;
+        }   
+        
+    .container ul li {
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        font-weight: bold;
+        background: rgba(228, 228, 228, 0.538);
+    }
+        
+    
+.container .btnEliminar {
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    margin-left: 5px;
+}    
+
+.container #btnAgregar {
+    background-color:green;
+    color: white;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.nuevoFondo {
+    background-color: gray;
+}

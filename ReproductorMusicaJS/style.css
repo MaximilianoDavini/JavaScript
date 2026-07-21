@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+    
+    background: url(img/FondoPrincipalNuevo2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+.reproductor-musica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    width: 380px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgba(228,228,228,0.1);
+}
+
+.reproductor-musica h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.reproductor-musica p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+#progreso {
+    appearance: none;
+    --webkit-appearence: none;
+    width: 100%;
+    height: 7px;
+    background-color: white;
+    border-radius: 5px;
+    margin:  32px 0 40px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#progreso::-webkit-slider-thumb {
+    appearance: none;
+    --webkit-appearence: none;
+    background: gray;
+    width: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline:4px solid white;
+    box-shadow: 0 6px 10px white;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+}
+
+.controles button {
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 20px;
+    background-color: grey;
+    border-radius: 50%;
+    border: 1px solid white;
+    outline: 0;
+    font-size: 1.5rem;
+    box-shadow:0 6px 10px white;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+
+.controles .control:hover {
+    transform: scale(1.1);
+}
+
+.controles .iconControl {
+    transform: scale(1.3);
+}
+
+.controles .iconControl:hover {
+    transform: scale(1.4);
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body .h1-body {
+    background-color: rgba(0, 0, 0, 0.804);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: lightblue;
+    text-shadow: 8px 2px white;
+    font-weight: bolder;
+    font-size: 200px;
+}
+.h1-titulo {
+    background-color:rgba(94, 93, 93, 0.161);
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.container-gral {
+    margin: 1px;
+}
