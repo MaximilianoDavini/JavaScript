@@ -3,6 +3,7 @@ const apiUrl = 'https://devsapihub.com/api-movies';
 
 const peliculaContainer = document.getElementById("pelicula-container");
 const lista = document.getElementById("lista");
+const welcome = document.getElementById("welcome");
 
 //Creo un array vacio para almacenar las pelis
 var peliculasData = [];
@@ -20,7 +21,7 @@ function actualizarPelis (data) {
         lista.appendChild(option);
         option.value = i;
         option.textContent = data[i].title;
-        // console.log("ID: " + option.value + " Contenido: " + option.textContent);
+        // cl de prueba .. console.log("ID: " + option.value + " Contenido: " + option.textContent);
         }
 }
 
@@ -28,27 +29,31 @@ function actualizarPelis (data) {
 function tarjeta (pelicula) { 
     const div = document.createElement("div");
     div.classList.add("pelicula");
-    peliculaContainer.appendChild(div);
     //
     const titulo = document.createElement("h1");
     const imagen = document.createElement("img");
     const texto = document.createElement("p");
     //
+    titulo.textContent = pelicula.title;
+    imagen.src = pelicula.image_url;
+    texto.textContent = pelicula.description;
+    //
     div.appendChild(titulo);
     div.appendChild(imagen);
     div.appendChild(texto);
-    //
-    titulo.textContent = data.title;
-    imagen.src = data.image_url;
-    texto.textContent = data.description;
+    peliculaContainer.appendChild(div);
 }
 
 function tarjetaTotales (data) {
-   data.forEach(pelicula => tarjeta(pelicula));
+    data.forEach(pelicula => tarjeta(pelicula));
+}
+
+function limpiarContenido () {
+    peliculaContainer.innerHTML = "";
 }
 
 function tarjetaPantalla() {
-
+    limpiarContenido ();
     if (lista.value === "todas") {
         tarjetaTotales(peliculasData);
     } else {
