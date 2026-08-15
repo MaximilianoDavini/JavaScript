@@ -3,7 +3,6 @@ const apiUrl = 'https://devsapihub.com/api-movies';
 
 const peliculaContainer = document.getElementById("pelicula-container");
 const lista = document.getElementById("lista");
-const welcome = document.getElementById("welcome");
 
 //Creo un array vacio para almacenar las pelis
 var peliculasData = [];
